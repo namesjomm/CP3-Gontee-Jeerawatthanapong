@@ -1,3 +1,4 @@
+#Input Login
 def login():
     usernameInput = input("Username : ")
     passwordInput = input("Password : ")
@@ -6,6 +7,7 @@ def login():
     else:
         return False
 
+#Process
 def showMenu():
     print("----- iShop -----")
     print("1. Vat Calculator")
@@ -25,6 +27,7 @@ def priceCalculator():
     price2 = int(input("Second Product Price : "))
     return vatCalculator(price1 + price2)
 
+#Output
 if login() == True:
     showMenu()
     userSelected = menuSelect()
@@ -33,4 +36,5 @@ if login() == True:
     elif userSelected == 2:
         print(priceCalculator())
 else:
+
     print("Login Failed")
